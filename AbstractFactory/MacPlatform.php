@@ -6,13 +6,16 @@
  * Date: 7/23/16
  * Time: 09:27
  */
-class MacPlatform implements AbstractPlatform {
-
-    public function makeBtn() {
-        // TODO: Implement makeBtn() method.
-    }
+require_once 'IPlatform.php';
+require_once 'MacWindow.php';
+require_once 'MacBtn.php';
+class MacPlatform implements IPlatform {
 
     public function makeWindow() {
-        // TODO: Implement makeWindow() method.
+        return new MacWindow();
+    }
+
+    public function makeBtn() {
+        return new MacBtn();
     }
 }

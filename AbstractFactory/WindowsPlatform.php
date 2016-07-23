@@ -6,13 +6,16 @@
  * Date: 7/23/16
  * Time: 09:26
  */
-class WindowsPlatform implements AbstractPlatform {
-
-    public function makeBtn() {
-        // TODO: Implement makeBtn() method.
-    }
+require_once 'IPlatform.php';
+require_once 'WindowsWindow.php';
+require_once 'WindowsBtn.php';
+class WindowsPlatform implements IPlatform {
 
     public function makeWindow() {
-        // TODO: Implement makeWindow() method.
+        return new WindowsWindow();
+    }
+
+    public function makeBtn() {
+        return new WindowsBtn();
     }
 }
